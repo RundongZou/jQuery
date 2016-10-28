@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>事件</title>
+		<script src="jQ/jquery-3.1.1.js"></script>
+		<style>
+			#div1{
+				width:200px;
+				height:200px;
+				background-color: red;
+			}
+			#div2{
+				width:100px;
+				height:100px;
+				background-color: deepskyblue;
+			}
+			#div3{
+				width:50px;
+				height:50px;
+				background-color: greenyellow;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="div1">
+			<div id="div2">
+				<div id="div3"></div>
+			</div>
+		</div>
+		<script>
+		
+		var eventObject = {
+			click:function(e){
+				alert(dataObject.click);
+			},
+			mouseenter:function(e){
+				alert(dataObject.mouseenter);
+			},
+			mouseleave:function(e){
+				alert(dataObject.mouseleave);
+			}
+		}
+		var dataObject = {
+			click:"click",
+			mouseenter:"mouseenter",
+			mouseleave:"mouseleave"
+		}
+		$("#div1").on("mouseleave","#div2",eventObject.mouseleave)
+				  .on("mouseenter","#div2",eventObject.mouseenter);
+//			$("#div1").on("click","#div2",function(){
+//				alert("1");
+//			}).on("mouseover","#div3",function(){
+//				alert("2");
+//			})
+
+		</script>
+	</body>
+</html>
