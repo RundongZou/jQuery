@@ -1,0 +1,96 @@
+*{
+	margin:0;
+	padding:0
+}
+body{
+	font-size: 16px;
+	font-family: "微软雅黑";
+}
+input{
+	outline:none;
+}
+/*最外面的那个div*/
+#wrap{
+	width:500px;
+	height:580px;
+	border:2px solid deepskyblue;
+	margin:10px auto;
+	position: relative;
+	padding:10px 0;
+}
+/*左右浮动*/
+.left{
+	float:left;
+}
+.right{
+	float: right;
+}
+/*每一个小部分的div*/
+.subDiv{
+	width:450px;
+	height:60px;
+/*	border:2px dotted mediumpurple;*/
+	margin:10px auto;
+	padding:0 10px	
+}
+.subDiv span{
+	font-size:14px;
+	width:180px;
+	margin-top:5px;
+	line-height:30px;
+}
+.subDiv input{
+	border-radius: 7px;
+	border:1px solid #999;
+	height:28px;
+	width:260px;
+	margin-top:5px;
+	text-indent: 10px;
+}
+.subDiv .error{
+	border:1px solid red;
+	float:right;
+}
+.subDiv .hint{
+/*	border:1px dotted deepskyblue;*/
+	width:300px;
+	height:20px;
+	line-height:16px;
+	margin-top:4px;
+	display:none;
+}
+.subDiv .hint img{
+	float:left;
+}
+
+.subDiv .hint .colorGray{
+	text-indent: 10px;
+	margin-left:10px;
+	font-size: 12px;
+	color:#999;
+	line-height:22px;
+}
+
+/*验证码*/
+.identifyCode{
+	position: absolute;
+	left:355px;
+	top:375px;
+	width:120px;
+	height:30px;
+	background-color: #000;
+	float:right;
+	color:#fff;
+	line-height: 30px;
+	font-size:20px;
+	text-align: center;
+	letter-spacing: 10px;
+}
+#next{
+	display: block;	
+	text-decoration: none;
+	color:blue;
+	font-size:12px;
+	margin-left:340px;
+	margin-top:10px;
+}

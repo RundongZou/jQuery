@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>register</title>
+		<link rel="stylesheet" href="style.css" />
+		<script src="register.js"></script>
+	</head>
+	<body>
+		<div id="wrap">
+			<div class="subDiv userName">
+				<span class="left">请输入用户名:</span>
+				<input class="right" type='text' value='' placeholder="您的账户名和登录名">
+				<div class="hint hint_userName left">
+					<img class="default" src="images/default.png">
+					<span class="colorGray">用户名称只能包含数字、字母、下划线，字符长度在6-20之间</span>
+				</div>
+			</div>
+			<div class="subDiv password">
+				<span class="left">请设置密码:</span>
+				<input class="right" type='text' value='' placeholder="建议至少两种字符组合">
+				<div class="hint hint_password left">
+					<img class="default" src="images/default.png">
+					<span class="colorGray">suggest you that use at least two combinations of letters,numbers and characters,and the length is limited from 6 to 20.</span>
+				</div>
+			</div>
+			<div class="subDiv passwordConfirm">
+				<span class="left">请确认密码:</span>
+				<input class="right" type='text' value='' placeholder="请再次输入密码">
+				<div class="hint hint_passwordConfirm left">
+					<img class="default" src="images/default.png">
+					<span class="colorGray">两次密码输入必须一致</span>
+				</div>
+			</div>
+			<div class="subDiv email">
+				<span class="left">邮箱验证:</span>
+				<input class="right" type='text' value='' placeholder="请输入邮箱">
+				<div class="hint hint_email left">
+					<img class="default" src="images/default.png">
+					<span class="colorGray">邮箱方便用于密码找回</span>
+				</div>
+			</div>
+			<div class="subDiv phone">
+				<span class="left">手机验证:</span>
+				<input class="right" type='text' value='' placeholder="请输入手机号码">
+				<div class="hint hint_phone left">
+					<img class="default" src="images/default.png">
+					<span class="colorGray">手机号码用于账号和密码安全</span>
+				</div>
+			</div>
+			<div class="subDiv">
+				<span class="left">验证码:</span>
+				<input class="input_identifyCode" style="width:120px;margin-left:8px;" class="right" type='text' value='' placeholder="请输入验证码">
+				<div style="width:300px;height:20px;" class="hint hint_identifyCode left">
+					<img  class="default" src="images/default.png">
+					<span class="colorGray">请输入正确的验证码，不区分大小写</span>
+				</div>
+				<div class="identifyCode">
+					djdk
+				</div>
+				<a id="next" href="">看不清？换一张</a>
+			</div>
+			<!--<div class="confirm">
+				<input type="checkbox">
+			</div>-->
+		</div>
+	</body>
+</html>
