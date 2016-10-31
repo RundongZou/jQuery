@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>jQuery Ajax</title>
+		<script type="text/javascript" src="jQ/jquery-3.1.1.js" ></script>
+	</head>
+	<body>
+		<script>
+			function fn(data){
+				alert(1);
+			}
+//			var url = "10.17.158.34:8090/第二阶段/JavaScript/day_15%20ajax%20json/person1.json";
+//			var setting = {
+//				type:"get",
+//				async:true,
+//				complete:function(jqXHR){
+//					alert("Complete!");
+//				},
+//				success:function(data){
+//					alert(data[0].name);
+//					alert(data[1].age);
+//					alert("success!")
+//				},
+//				error:function(jqXHR){
+//					alert("Error!")
+//				},
+//				jsonp:fn()
+//			}
+//			$.ajax(url,setting);
+		</script>
+		<script src="10.17.158.34:8090/Product/GetProductsByPage_get?pagesize=10&pageindex=1&callback=fn"></script>
+	</body>
+</html>
+
+			

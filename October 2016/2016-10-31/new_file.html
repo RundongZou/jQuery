@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Title</title>
+	<script src="js/jquery-3.1.1.js"></script>
+</head>
+<body>
+	<div id="div1"></div>
+<script>
+	//http:10.17.158.241:8081/Product/GetProductsByPage_get?pagesize=10&pageindex=1&callback=fn1
+	var url="http://10.17.158.241:8081/Product/GetProductsByPage_get";
+	var setting={
+		type:"get",
+		dataType:"jsonp",//这里写jsonp可以跨域
+		data:{
+			pagesize:10,
+			pageindex:1
+		},
+		success:function (data) {
+//			console.log(Data[1].Data.name);
+			for(var i=0;i<data.length;i++){
+				var a=data[i].Data;
+				$("#div1").html($("#div1").html()+JSON.parse(a).name+"&ensp;"+"&ensp;"+JSON.parse(a).total+"<br/>");
+			}
+
+//			alert(JSON.parse(a).name)
+		},
+		error:function () {
+			alert("error")
+		},
+		complete:function () {
+			alert("complete")
+		},
+		404:function () {
+			alert(404)
+		}
+	};
+	$.ajax(url,setting);
+
+
+</script>
+
+</body>
+</html>
